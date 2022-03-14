@@ -1,14 +1,9 @@
-#         Polybius Playfair Cipher
-
-keyword = 'ADALOVELACE'
-message = 'LVFPPNMQDOORAYJVKHPGPBTPKHNZFOAY'
-message2 = "DOESTHJSALLSOUNDJNTERESTJNGTOYOU"
-
-# Grid details
+# Playfair Cipher
 # The letter 'j' also stands for the letter 'i' that is missing in order for the valid_characters to contain 25 letters.
 # group_size is linked with the amount of letters in the valid_characters. 5 ** 2 = 25
 valid_characters = 'ABCDEFGHJKLMNOPQRSTUVWXYZ'
 grid_size = 5
+
 
 def create_grid(keyword):
     grid_values = []
@@ -33,6 +28,7 @@ def create_grid(keyword):
         grid[row].append(grid_values[i])
 
     return grid
+
 
 def decipher(keyword, message):
     grid = create_grid(keyword)
@@ -83,7 +79,8 @@ def decipher(keyword, message):
                 group = []
                 coordinates = []
 
-    print(deciphered_message)
+    return deciphered_message
+
 
 def cipher(keyword, message):
     grid = create_grid(keyword)
@@ -133,7 +130,4 @@ def cipher(keyword, message):
                 group = []
                 coordinates = []
 
-    print(ciphered_message)
-
-decipher(keyword,message)
-cipher(keyword,message2)
+    return ciphered_message
