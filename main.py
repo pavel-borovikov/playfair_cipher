@@ -1,6 +1,6 @@
 # Playfair Cipher
 # The letter 'j' also stands for the letter 'i' that is missing in order for the valid_characters to contain 25 letters.
-# group_size is linked with the amount of letters in the valid_characters. 5 ** 2 = 25
+# grid_size is linked with the amount of letters in the valid_characters. 5 ** 2 = 25
 valid_characters = 'ABCDEFGHJKLMNOPQRSTUVWXYZ'
 grid_size = 5
 
